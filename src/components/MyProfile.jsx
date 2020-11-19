@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileLiked from './ProfileLiked';
+import { Link } from 'react-router-dom';
 
 export default class MyProfile extends React.Component {
   constructor(props) {
@@ -8,13 +9,29 @@ export default class MyProfile extends React.Component {
   }
 
   render() {
-    const { likedProfile } = this.props;
+    const { likedProfile, looking, removeLikedProfile } = this.props;
     return (
-      <>
-        {likedProfile.map((pro) => (
-          <ProfileLiked data={pro} />
-        ))}
-      </>
+      <main className='homepage-container'>
+        <h1>My Profile</h1>
+        <div>
+          <p>I looking for : {looking.gender}</p>
+          <p>
+            beetween {looking.age.min} and {looking.age.max}
+          </p>
+          <p>I'm from {looking.city}</p>
+          <Link to='/'>Click Here to Change</Link>
+        </div>
+        <p>Profil liked : {likedProfile.length}</p>
+        <div className='likedProfile'>
+          {likedProfile.map((pro) => (
+            <ProfileLiked
+              key={pro.login.uuid}
+              data={pro}
+              removeLikedProfile={removeLikedProfile}
+            />
+          ))}
+        </div>
+      </main>
     );
   }
 }

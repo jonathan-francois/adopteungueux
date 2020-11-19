@@ -32,12 +32,21 @@ class App extends React.Component {
     this.setState({ likedProfile: [...this.state.likedProfile, item] });
   };
 
+  removeLikedProfile = (item) => {
+    const newTab = this.state.likedProfile.filter(
+      (pro) => pro.login.uuid !== item.login.uuid
+    );
+    this.setState({ likedProfile: [...newTab] });
+  };
+
   render() {
     return (
       <Router>
         <Header />
         <Switch>
-          <Route path='/messages' component={Messenger} />
+          <Route path='/messages'>
+            <Messenger />
+          </Route>
           <Route path='/research'>
             <Searchedprofile
               looking={this.state.looking}
@@ -45,7 +54,11 @@ class App extends React.Component {
             />
           </Route>
           <Route path='/myprofile'>
-            <MyProfile likedProfile={this.state.likedProfile} />
+            <MyProfile
+              looking={this.state.looking}
+              likedProfile={this.state.likedProfile}
+              removeLikedProfile={this.removeLikedProfile}
+            />
           </Route>
           <Route path='/team' component={Team} />
           <Route exact path='/'>

@@ -54,6 +54,7 @@ export default function Criterias(props) {
             id='ville'
             name='city'
             value={city}
+            placeholder='Marseille'
             onChange={props.handleChange}
           />
         </fieldset>
