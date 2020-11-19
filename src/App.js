@@ -1,21 +1,25 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Messenger from './components/Messenger';
+import Searchedprofile from './components/Searchedprofile';
+import Home from './components/Home';
+import Team from './components/Team';
+import Profile from './components/Profile';
+import './App.css';
 
 function App() {
   return (
     <Router>
-    <div className="App">
-
-    </div>
-    {/* <Switch>
-      <Route path="/" component={} />
-      <Route path="/" component={} />
-      <Route path="/" component={} />
-      <Route exact path="/" component={} />
-    </Switch> */}
+      <Header />
+      <Switch>
+        <Route path='/messages' component={Messenger} />
+        <Route path='/research' component={Searchedprofile} />
+        {/* <Route path='/myprofile' component={Profile} /> */}
+        <Route path='/team' component={Team} />
+        <Route exact path='/' component={Home} />
+      </Switch>
+      <Footer />
     </Router>
   );
 }

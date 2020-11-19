@@ -1,0 +1,365 @@
+/* IMPORTS
+/* Texte */
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Title */
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+/* CSS GLOBAL */
+
+/************************ 
+          HEADER
+************************/
+
+.html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  max-height: 20%;
+  padding: 2%;
+  background-color: mediumaquamarine;
+
+  display: flex;
+}
+
+.header a {
+  margin-top: 45px;
+}
+
+#parchemin {
+  max-width: 100px;
+}
+
+.header h1 {
+  font-size: 50px;
+  font-family: 'Fondamento', cursive;
+  padding-left: 3%;
+  letter-spacing: 0.7px;
+}
+
+.menu-item {
+  filter: saturate(0%) contrast(95%);
+  transition: filter 1s;
+  margin-top: 20%;
+  margin-right: 13%;
+  font-size: 40px;
+}
+
+.menu-item:hover {
+  filter: none;
+}
+.navbar {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/************************ 
+        HOMEPAGE
+************************/
+
+.homepage-container {
+  background-color: #ced3d5;
+  font-family: 'MedievalSharp', sans-serif;
+}
+
+.homepage-container h1 {
+  font-family: 'Almendra SC', sans-serif;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+  background-color: darkorange;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+.homepage-container h1 > span {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.input-range {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+fieldset h3 {
+  font-family: 'Fondamento', cursive;
+}
+
+fieldset input {
+  margin: 0.5em 0.75em;
+}
+
+.btn-form {
+  margin: 20px;
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 0 0 50% 50%;
+  border: 1px solid #566963;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  color: #ffffff;
+  margin: auto;
+  font-family: 'Fondamento', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0.5em;
+  padding: 11px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+}
+.btn-form:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+.btn-form:active {
+  position: relative;
+  top: 1px;
+}
+form {
+  padding-bottom: 1em;
+}
+
+/************************ 
+        MESSENGER
+************************/
+
+.conversation-container {
+  background-color: rgba(110, 127, 133, 0.342);
+}
+
+.conversation-container h1 {
+  font-family: 'Almendra SC', sans-serif;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+  background-color: darkorange;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+.conversation-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#conversation1 {
+  background-color: rgb(143, 25, 25);
+  max-width: fit-content;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-radius: 30px;
+  color: wheat;
+  letter-spacing: 0.5px;
+}
+
+#conversation2 {
+  align-self: flex-end;
+  background-color: rgb(109, 93, 153);
+  max-width: 40%;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  border-radius: 30px;
+  color: wheat;
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+
+.conversation-send {
+  margin: 0;
+  padding: 20px;
+  background-color: darkorange;
+  text-align: center;
+}
+
+.conversation-input {
+  max-width: 80%;
+  max-height: 10px;
+  background-color: grey;
+  border-radius: 30px;
+  margin: 20px;
+  margin-right: 30px;
+}
+
+.send-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.send-message {
+  text-align: end;
+  vertical-align: bottom;
+  line-height: 20px;
+}
+/************************ 
+        PROFILE
+************************/
+
+.profile-container {
+  text-align: center;
+  font-family: 'MedievalSharp', sans-serif;
+  background-color: #ced3d5;
+}
+
+.profile-container h1 {
+  font-family: 'Almendra SC', sans-serif;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+  background-color: darkorange;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+.profile-picture img {
+  margin: 30px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 3px solid rgb(114, 114, 114);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn-find {
+  margin: 20px;
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  align-self: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Fondamento', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+}
+.btn-find:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+.btn-find:active {
+  position: relative;
+  top: 1px;
+}
+
+/************************ 
+        FOOTER
+************************/
+
+.footer {
+  background-color: mediumaquamarine;
+  text-align: center;
+  padding-top: 20px;
+  padding: 20px;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  font-family: 'MedievalSharp', sans-serif;
+  padding: 10px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.2em;
+}
+.menu-foooter {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-foooter ul {
+  width: 1300px;
+}
+.footer p {
+  font-family: 'Almendra SC', sans-serif;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/************************ 
+HREF UNDERLINE ANIMATION
+************************/
+
+.cool-link {
+  display: inline-block;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin-top: 2px;
+  height: 2px;
+  background: antiquewhite;
+  transition: width 1s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 1s;
+}
+
+/*****************
+    RESPONSIVE
+*****************/
+
+@media all and (max-width: 700px) {
+  .title {
+    display: none;
+  }
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+/* rholala
+ils ont tout cassé!  ouais on peut pas bosser correctement :))
+
+sont relous! ah mais carrément, moi je veut d'la couleur et on a que des erreurs la 
+
+TU REGARDERA SI LES POLICES D'éCRITURE TE PLAISE 
+
+J'aime bien Acme. D'accord et l'autre pour le text normal ?
+Quoique ça fait un peu "dessin animé" sur le titre non ?
+j'hésite, je vais essayer de chercher des polices vraiment style mediéval
+Tu regardes sur quel site ?
+Y'a adobefont qui est pas mal pour trier en fonction de critères
+Je vais aller voir dessus, je connaissias pas, je suis sur Google Font mais on peut pas spécialement bien chercher
+Oui c'est moins "précis" du coup ! 
+Par contre je sais pas comment on l'utilise 
+Yes pas mal celui ci
+Sans l'italic ça donne quoi ?
+Attends je vais le récup. 
+Yes cool !
+
+Désolé pas vu que tu avait écris ^^
+
+Du coup pour les titres on garde cet police ?
+*/
