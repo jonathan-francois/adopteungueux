@@ -22,12 +22,12 @@ const Profile = ({ data, handleRandom, addLikedProfile }) => {
               handleRandom();
             }}
           >
-            Like
+            ❤️
           </button>
         </div>
         <div className='profile-message'>
           {/* Ici ça sera juste une petit icone d'enveloppe pour faire genre on peut envoyer un msg, mais en fait on peut pas.  */}
-          <button>Message</button>
+          <button>✉️</button>
         </div>
       </section>
       <button type='button' className='btn-find' onClick={handleRandom}>

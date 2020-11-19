@@ -14,9 +14,9 @@ export default class MyProfile extends React.Component {
       <main className='homepage-container'>
         <h1>My Profile</h1>
         <div>
-          <p>I looking for : {looking.gender}</p>
+          <p>I'm looking for : {looking.gender}</p>
           <p>
-            beetween {looking.age.min} and {looking.age.max}
+            Beetween {looking.age.min} and {looking.age.max}
           </p>
           <p>I'm from {looking.city}</p>
           <Link to='/'>Click Here to Change</Link>

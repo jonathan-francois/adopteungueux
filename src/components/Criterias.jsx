@@ -47,14 +47,14 @@ export default function Criterias(props) {
           />
         </fieldset>
         <fieldset className='city'>
-          <h3> City </h3>
+          <h3>City</h3>
 
           <input
             type='text'
             id='ville'
             name='city'
             value={city}
-            placeholder='Marseille'
+            placeholder='Verdun'
             onChange={props.handleChange}
           />
         </fieldset>
@@ -106,7 +106,7 @@ export default function Criterias(props) {
           <label htmlFor='relation2'>A dirty life companion</label>
         </fieldset>
         <button type='submit' className='btn-form'>
-          Find your perfect
+          Find your perfect match
         </button>
       </form>
     </section>

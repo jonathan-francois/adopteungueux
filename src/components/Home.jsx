@@ -1,6 +1,6 @@
 import React from 'react';
 import Criterias from './Criterias';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 // import LordsPicture from '../assets/lords.jpg';
 
@@ -85,21 +85,23 @@ class Home extends React.Component {
     if (this.state.redirect) return <Redirect push to='/research' />;
     return (
       <main className='homepage-container'>
-        <h1>
-          Welcome <span>Philibert de Montalembert !</span>
+        <h1 className='userH1'>
+          Welcome <Link to='/myprofile'>Philibert de Montalembert !</Link>
         </h1>
-        <section className='selection'>
-          <div className='lords'></div>
-          <div className='knights'></div>
-          <div className='olds'></div>
-        </section>
-        <Criterias
-          profile={this.state.profile}
-          handleChange={this.handleChange}
-          handleChangeChkb={this.handleChangeChkb}
-          handleAgeValue={this.handleAgeValue}
-          handleSubmit={this.handleSubmit}
-        />
+        <div className='homepage-content'>
+          <Criterias
+            profile={this.state.profile}
+            handleChange={this.handleChange}
+            handleChangeChkb={this.handleChangeChkb}
+            handleAgeValue={this.handleAgeValue}
+            handleSubmit={this.handleSubmit}
+          />
+          <section className='selection'>
+            <div className='lords'>Test</div>
+            <div className='knights'></div>
+            <div className='olds'></div>
+          </section>
+        </div>
       </main>
     );
   }

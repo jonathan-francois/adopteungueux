@@ -38,7 +38,6 @@ class App extends React.Component {
     );
     this.setState({ likedProfile: [...newTab] });
   };
-
   render() {
     return (
       <Router>
