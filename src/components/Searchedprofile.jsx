@@ -2,14 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Profile from './Profile';
 
-const looking = {
-  gender: 'female',
-  age: {
-    min: 18,
-    max: 45,
-  },
-  city: 'Marseille',
-};
 class SearchedProfile extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +11,7 @@ class SearchedProfile extends React.Component {
       isLoading: true,
       index: 0,
     };
+    console.log(this.props);
   }
 
   componentDidMount = async () => {
@@ -26,6 +19,7 @@ class SearchedProfile extends React.Component {
   };
 
   fetchDataFromApi = async () => {
+    const { looking } = this.props;
     const {
       data: { results },
     } = await axios.get('https://randomuser.me/api/?results=100');
@@ -39,12 +33,13 @@ class SearchedProfile extends React.Component {
   };
 
   dataFilterAllGender = (item) =>
-    item.dob.age >= looking.age.min && item.dob.age <= looking.age.max;
+    item.dob.age >= this.props.looking.age.min &&
+    item.dob.age <= this.props.looking.age.max;
 
   dataFilterSingleGender = (item) =>
-    item.gender === looking.gender &&
-    item.dob.age >= looking.age.min &&
-    item.dob.age <= looking.age.max;
+    item.gender === this.props.looking.gender &&
+    item.dob.age >= this.props.looking.age.min &&
+    item.dob.age <= this.props.looking.age.max;
 
   handleRandom = async () => {
     if (this.state.index === this.state.dataFilter.length - 1) {
@@ -63,7 +58,13 @@ class SearchedProfile extends React.Component {
     return (
       <main className='profile-container'>
         <h1>Matching Profiles</h1>
-        {<Profile data={dataFilter[index]} handleRandom={this.handleRandom} />}
+        {
+          <Profile
+            data={dataFilter[index]}
+            handleRandom={this.handleRandom}
+            addLikedProfile={this.props.addLikedProfile}
+          />
+        }
       </main>
     );
   }

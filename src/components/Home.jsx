@@ -1,5 +1,8 @@
 import React from 'react';
 import Criterias from './Criterias';
+import { Redirect } from 'react-router-dom';
+
+// import LordsPicture from '../assets/lords.jpg';
 
 class Home extends React.Component {
   constructor(props) {
@@ -23,6 +26,7 @@ class Home extends React.Component {
         age: {},
         city: '',
       },
+      redirect: false,
     };
   }
 
@@ -49,34 +53,45 @@ class Home extends React.Component {
   };
 
   handleSubmit = (e) => {
+    const { setLookingState } = this.props;
     e.preventDefault();
     const { profile } = this.state;
     if (profile.gender_male && profile.gender_female) {
-      this.setState({
-        looking: { ...profile.ageValue, city: profile.city, gender: 'both' },
+      setLookingState({
+        age: profile.ageValue,
+        city: profile.city,
+        gender: 'both',
       });
+      this.setState({ redirect: true });
     } else if (profile.gender_female && !profile.gender_male) {
-      this.setState({
-        looking: { ...profile.ageValue, city: profile.city, gender: 'female' },
+      setLookingState({
+        age: profile.ageValue,
+        city: profile.city,
+        gender: 'female',
       });
+      this.setState({ redirect: true });
     } else {
-      this.setState({
-        looking: { ...profile.ageValue, city: profile.city, gender: 'male' },
+      setLookingState({
+        age: profile.ageValue,
+        city: profile.city,
+        gender: 'male',
       });
+      this.setState({ redirect: true });
     }
-    document.location.href = '/research';
+    console.log();
   };
 
   render() {
+    if (this.state.redirect) return <Redirect push to='/research' />;
     return (
       <main className='homepage-container'>
         <h1>
           Welcome <span>Philibert de Montalembert !</span>
         </h1>
-        <section className='lords'></section>
         <section className='selection'>
-          <div className='MST'></div>
-          <div className='richs'></div>
+          <div className='lords'></div>
+          <div className='knights'></div>
+          <div className='olds'></div>
         </section>
         <Criterias
           profile={this.state.profile}

@@ -21,7 +21,11 @@ body {
 .header {
   max-height: 20%;
   padding: 2%;
-  background-color: mediumaquamarine;
+  /* background-color: mediumaquamarine; */
+  background-image: url('./assets/bannerpic1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   display: flex;
 }
@@ -130,8 +134,13 @@ fieldset input {
   position: relative;
   top: 1px;
 }
+
+.btn-form:focus {
+  outline: 0;
+}
+
 form {
-  padding-bottom: 1em;
+  padding: 0.75em 0;
 }
 
 /************************ 
@@ -145,11 +154,12 @@ form {
 .conversation-container h1 {
   font-family: 'Almendra SC', sans-serif;
   cursor: pointer;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
   background-color: darkorange;
   word-spacing: 5px;
   text-align: center;
+  width: auto;
 }
 
 .conversation-content {
@@ -184,9 +194,8 @@ form {
 
 .conversation-send {
   margin: 0;
-  padding: 20px;
+  padding-top: 0.5em;
   background-color: darkorange;
-  text-align: center;
 }
 
 .conversation-input {
@@ -203,11 +212,37 @@ form {
   justify-content: space-around;
 }
 
-.send-message {
-  text-align: end;
-  vertical-align: bottom;
-  line-height: 20px;
+.send-btn {
+  width: 105px;
+  height: 80px;
+  margin-left: 1em;
+  border-radius: 30%;
+  box-shadow: 2px 1px 4px red;
+  font-size: 20px;
 }
+
+.label-message {
+  text-shadow: 2px 0px 4px white;
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.send-message {
+  font-size: 13px;
+  line-height: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 0;
+}
+
+.label-message,
+.send-btn {
+  margin-top: 0.5em;
+}
+
 /************************ 
         PROFILE
 ************************/

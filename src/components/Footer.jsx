@@ -15,7 +15,7 @@ const Footer = () => {
           Our Team
         </Link>
       </nav>
-      <p>© 2020 Adopt a Geux</p>
+      <p>© 2020 Adopt a Gueux</p>
     </div>
   );
 };

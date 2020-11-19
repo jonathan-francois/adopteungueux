@@ -15,7 +15,7 @@ const Profile = ({ data, handleRandom, addLikedProfile }) => {
       <section className='profile-like-and-message'>
         <div className='profile-like'>
           {/* Ici ça sera un petit coeur pour liker le profil d'un gueux. On peut réutiliser le truc qu'on a vu dans le checkpoint.  */}
-          <button
+          {/* <button
             type='button'
             onClick={() => {
               addLikedProfile(data);
@@ -26,13 +26,15 @@ const Profile = ({ data, handleRandom, addLikedProfile }) => {
           </button>
         </div>
         <div className='profile-message'>
-          {/* Ici ça sera juste une petit icone d'enveloppe pour faire genre on peut envoyer un msg, mais en fait on peut pas.  */}
+          {/* Ici ça sera juste une petit icone d'enveloppe pour faire genre on peut envoyer un msg, mais en fait on peut pas.  
           <button>Message</button>
         </div>
-      </section>
+      
       <button type='button' className='btn-find' onClick={handleRandom}>
         Next gueux
-      </button>
+      </button> */}
+        </div>
+      </section>
     </>
   );
 };

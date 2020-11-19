@@ -105,7 +105,7 @@ export default function Criterias(props) {
           <label htmlFor='relation2'>A dirty life companion</label>
         </fieldset>
         <button type='submit' className='btn-form'>
-          Find your perfect match
+          Find your perfect
         </button>
       </form>
     </section>
