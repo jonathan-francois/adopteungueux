@@ -15,7 +15,7 @@ export default function Criterias(props) {
     <section className='criterias'>
       <form onSubmit={props.handleSubmit}>
         <fieldset className='gender'>
-          <h3>I want a : </h3>
+          <h3>I want to find a : </h3>
           <input
             type='checkbox'
             id='gender_male'
@@ -105,7 +105,7 @@ export default function Criterias(props) {
           <label htmlFor='relation2'>A dirty life companion</label>
         </fieldset>
         <button type='submit' className='btn-form'>
-          Trouver votre gueux
+          Find your perfect match
         </button>
       </form>
     </section>

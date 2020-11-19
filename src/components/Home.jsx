@@ -18,6 +18,11 @@ class Home extends React.Component {
         showerWeek: false,
         relation: '',
       },
+      looking: {
+        gender: '',
+        age: {},
+        city: '',
+      },
     };
   }
 
@@ -45,7 +50,21 @@ class Home extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    document.location.href = '/searched-profile';
+    const { profile } = this.state;
+    if (profile.gender_male && profile.gender_female) {
+      this.setState({
+        looking: { ...profile.ageValue, city: profile.city, gender: 'both' },
+      });
+    } else if (profile.gender_female && !profile.gender_male) {
+      this.setState({
+        looking: { ...profile.ageValue, city: profile.city, gender: 'female' },
+      });
+    } else {
+      this.setState({
+        looking: { ...profile.ageValue, city: profile.city, gender: 'male' },
+      });
+    }
+    document.location.href = '/research';
   };
 
   render() {

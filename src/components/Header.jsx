@@ -5,8 +5,10 @@ import Parchemin from '../assets/parchemin.svg';
 const Header = () => {
   return (
     <div className='header'>
-      <img id='parchemin' src={Parchemin} alt='' />
-      <h1>Adopt a Gueux</h1>
+      <Link to='/'>
+        <img id='parchemin' src={Parchemin} alt='' />
+      </Link>
+      <h1 className='title'>Adopt a Gueux</h1>
       <nav className='navbar'>
         <Link to='/' className='menu-item' alt='Home'>
           🏠
