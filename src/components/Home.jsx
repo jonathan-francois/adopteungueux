@@ -6,7 +6,6 @@ import Olds from '../assets/olds.jpg';
 import Courtesans from '../assets/courtesans.jpg';
 import Border from '../assets/border.png';
 
-// import LordsPicture from '../assets/lords.jpg';
 
 class Home extends React.Component {
   constructor(props) {
@@ -125,7 +124,7 @@ class Home extends React.Component {
     if (this.state.redirect) return <Redirect push to='/research' />;
     return (
       <main className='homepage-container'>
-        <h1 className='userH1'>
+        <h1 className='userH1' id="tittleHome">
           Welcome <Link to='/myprofile'>Philibert de Montalembert !</Link>
         </h1>
 
