@@ -69,8 +69,8 @@ export default function Criterias(props) {
           />
         </fieldset>
 
-        <fieldset className='cleanliness'>
-          <h3>Degree of cleanliness :</h3>
+        <fieldset className='cleanliness align'>
+          <h3>Cleanliness :</h3>
           <div className="inputs">
           <input
             type='checkbox'
@@ -102,7 +102,7 @@ export default function Criterias(props) {
           <label htmlFor='clean3'>More than 1 per week</label>
           </div>
         </fieldset>
-        <fieldset id='relationship' className='relationship'>
+        <fieldset  className='relationship inputs align'>
           <h3>I'm loooking for :</h3>
           <div className="inputs">
           <input

@@ -1,6 +1,5 @@
 import React from 'react';
 import user1image from '../assets/profile1.png';
-import user2image from '../assets/profile2.png';
 import user3image from '../assets/profile3.png';
 
 
@@ -55,7 +54,7 @@ class Messenger2 extends React.Component {
   };
 
   onEnterPress = (e) => {
-    if(e.keyCode == 13 && e.shiftKey == false) {
+    if(e.keyCode === 13 && e.shiftKey === false) {
       e.preventDefault();
       this.handleSubmit(e)
     }
