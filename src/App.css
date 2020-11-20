@@ -186,7 +186,13 @@ fieldset {
   border: none;
   text-align: center;
   font-size: 20px;
-  margin: 0 auto;
+  display : flex;
+  flex-direction : column;
+  align-items: center;
+}
+
+fieldset .checkboxGender {
+  display: flex;
 }
 
 fieldset h3 {
@@ -201,6 +207,12 @@ fieldset input {
   margin: 0.25 0.5em;
 }
 
+.inputs {
+display : flex;
+justify-content: flex-start;
+box-sizing: border-box;
+margin : 0 auto;
+}
 
 #ville {
   border-radius: 5px;
@@ -216,6 +228,7 @@ fieldset input {
   padding-left: 2px;
   font-size: 20px;
 }
+
 
 .btn-form {
   margin: 20px;
@@ -303,7 +316,7 @@ form {
   display: flex;
   flex-direction: column;
   background-image: url('./assets/Texturepapier.png');
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding: 30px 30px;
 }
@@ -327,7 +340,7 @@ form {
 }
 
 .conversations-items p {
-  font-size: 25px;
+  font-size: 30px;
   margin: 10px auto;
   width: 100%;
 }
@@ -423,7 +436,7 @@ form {
   padding: 20px;
   margin: 20px 10px;
   border-radius: 30px;
-  color: wheat;
+  color: black;
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
@@ -432,9 +445,9 @@ form {
 }
 
 .conversation1 > p {
-  border: 4px solid rgb(124, 97, 67);
+  border: 4px solid rgba(124, 97, 67, 0.250);
   margin-left: 20px;
-  background-color: rgb(143, 25, 25);
+  background-color: rgba(34, 22, 197, 0.384);
   border-radius: 30px;
   padding: 13px;
 }
@@ -442,8 +455,8 @@ form {
   align-self: flex-end;
 }
 .conversation2 > p {
-  border: 4px solid rgb(124, 97, 67);
-  background-color: rgb(109, 93, 153);
+  border: 4px solid rgb(124, 97, 67, 0.250);
+  background-color: rgba(143, 25, 25, 0.13);
   border-radius: 30px;
   padding: 13px;
   margin-right: 20px;
@@ -453,12 +466,13 @@ form {
 .conversation2pic {
   max-width: 60px;
   max-height: 60px;
-  border: 2px solid #54381e;
+  border: 2px solid rgba(117, 69, 24, 0.250);
   border-radius: 50px;
 }
 
 .conversation > .conversation1pic {
   margin: 10px;
+  cursor:pointer;
 }
 
 .conversation-send {
@@ -466,6 +480,7 @@ form {
   padding-top: 0.5em;
   background-image: url('./assets/Texturepapier.png');
   max-width: 90%;
+  
 }
 
 .conversation-input {
@@ -503,15 +518,16 @@ form {
   box-shadow: 2px 1px 4px black;
   font-size: 20px;
   outline: transparent;
+  cursor: pointer;
 }
 
 .send-message {
+  text-align: left;
   font-size: 20px;
   line-height: 70px;
   height: 70px;
-  text-align: right;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 30px;
   border-radius: 30px;
 }
 
@@ -524,6 +540,7 @@ form {
 ************************/
 
 .profile-container {
+  max-width:90%;
   background-image: url('./assets/Texturepapier.png');
   text-align: center;
   font-family: 'MedievalSharp', sans-serif;
@@ -543,10 +560,9 @@ form {
 }
 
 .profile-picture img {
-  margin: 5px 50px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  height: 200px;
+  margin: 25px 50px;
+  border-radius: 50%;
   border: 3px solid #a6827e;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -633,6 +649,8 @@ form {
         MYPROFILE
 ************************/
 .profile-info {
+  font-size: 30px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -710,6 +728,7 @@ form {
   width: 40%;
   border-radius: 50%;
   border: 3px solid #a6827e;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .team-details {
@@ -717,15 +736,17 @@ form {
   flex-direction: row;
   margin: 10px auto;
 }
+
 .team-details blockquote {
   border: 2px double black;
-  border-radius: 0 0 50% 50%;
+  border-radius: 0 0 30% 30%;
   padding: 5%;
 }
 
 .team-details img {
   margin: 15px 0;
   align-self: flex-start;
+  width: 40%;
 }
 
 .img-social {
@@ -737,7 +758,34 @@ form {
 .img-user {
   display : flex;
   justify-content: center;
+}
 
+/* OVERLAY IMG */
+
+.overlay-profile-img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  top: 80%;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.842);
+}
+
+.container-img:hover .overlay-profile-img {
+  opacity: 1;
+}
+
+.name-profile-img {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 
@@ -760,6 +808,8 @@ form {
 .social-icons i {
   color: #fff;
   position: absolute;
+  top: 1.9em;
+  left: 1.9em;
   transition: all 265ms ease-out;
 }
 
@@ -812,6 +862,7 @@ form {
 }
 
 .footer a {
+  
   font-family: 'MedievalSharp', sans-serif;
   padding: 10px;
   text-decoration: none;
@@ -919,12 +970,30 @@ HREF UNDERLINE ANIMATION
     display : flex;
     flex-direction: column;
     align-items : center;
-    justify-content: center;
   }
-  .inputs {
+  fieldset .checkboxGender {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-user img {
+    min-width: 60%;
+  }
+  
+  .img-user {
     display : flex;
-    flex-direction: row;
     justify-content: center;
-    align-items : center;
   }
+
+  .social-icons {
+    display : flex;
+    flex-direction : row;
+  }
+
 }

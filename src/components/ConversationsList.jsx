@@ -21,8 +21,7 @@ const ConversationList = () => {
               src={user2image}
               alt='some user'
             ></img>
-        <Link to='/messages'>
-        
+        <Link to='/message1'>        
           <p>Gudule de Sautemouton</p>
         </Link>
           </div>
@@ -31,7 +30,7 @@ const ConversationList = () => {
               src={user3image}
               alt='some user'
             ></img>
-        <Link to='/messages'>
+        <Link to='/message2'>
           <p> Diane de la Combe-aux Cerfs</p>
         </Link>
           </div>
