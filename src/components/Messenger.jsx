@@ -57,10 +57,10 @@ class Messenger extends React.Component {
     const { value, messageAdd } = this.state;
     return (
       <div className='conversation-container'>
-        <p>
+        <div className="conv-header">
           <img className='messageAvatar' src={user2image} alt='1' />
           <h1>Conversation with {userProfile.login.username}</h1>
-        </p>
+        </div>
         <div className='conversation-content'>
           <div className='conversation2'>
             <p>Good evening Milady, what're you planning to do tonight ?</p>
@@ -119,7 +119,11 @@ class Messenger extends React.Component {
             ></img>
           </div>
           {messageAdd &&
-            messageAdd.map((m) => <div className='conversation2'>{m}</div>)}
+            messageAdd.map((m,itt) => <div key={itt} className='conversation2'><p>{m}</p><img
+            className='conversation1pic'
+            src={user1image}
+            alt='some user'
+          ></img></div>)}
         </div>
         <div className='conversation-send'>
           <form
