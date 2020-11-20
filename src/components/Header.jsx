@@ -5,11 +5,13 @@ const Header = () => {
   return (
     <header className='header'>
       <h1 className='title'>
-        <p>
-          Adopt
-          <span> 1 </span>
-          Gueux
-        </p>
+        <Link to='/'>
+          <p>
+            Adopt
+            <span> 1 </span>
+            Gueux
+          </p>
+        </Link>
       </h1>
       <nav className='navbar'>
         <Link to='/' className='menu-item' alt='Home'>

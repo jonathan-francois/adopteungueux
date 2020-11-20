@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <main className='footer'>
       <nav className='menu-footer'>
-        <Link to='/' className='menu-item-footer, cool-link'>
+        <Link to='/tos' className='menu-item-footer, cool-link'>
           Terms of service
         </Link>
-        <Link to='/' className='menu-item-footer, cool-link'>
+        <Link to='/privacy' className='menu-item-footer, cool-link'>
           Privacy
         </Link>
         <Link to='/team' className='menu-item-footer, cool-link'>
