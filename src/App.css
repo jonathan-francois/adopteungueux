@@ -333,7 +333,7 @@ form {
   flex-direction: column;
 }
 
-.conversation-container > p {
+.conversation-container > .conv-header, .conversation-container > p  {
   display: flex;
   justify-content: center;
   margin: 0;

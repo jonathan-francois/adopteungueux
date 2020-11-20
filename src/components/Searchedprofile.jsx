@@ -11,7 +11,6 @@ class SearchedProfile extends React.Component {
       isLoading: true,
       index: 0,
     };
-    console.log(this.props);
   }
 
   componentDidMount = async () => {

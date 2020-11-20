@@ -82,7 +82,6 @@ class Home extends React.Component {
       });
       this.setState({ redirect: true });
     }
-    console.log();
   };
 
   render() {
