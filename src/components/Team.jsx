@@ -13,13 +13,8 @@ const Team = () => {
         <section className='team'>
           <div className='team-details'>
             <div className='img-social'>
-            <div className='container-img'>
             <div className='img-user'>
-              <img src='https://avatars0.githubusercontent.com/u/43884584?s=460&u=bbba901f0fa0cd299a051b09a9a416d1ae28622c&v=4' alt='Cédric' />
-            </div>
-            <div className="overlay-profile-img">
-              <div className="name-profile-img">Cédric</div>
-              </div>
+              <img src='https://avatars0.githubusercontent.com/u/43884584?s=460&u=bbba901f0fa0cd299a051b09a9a416d1ae28622c&v=4' alt='Cédric' title='Cédric'/>
             </div>
             <div class="social-icons">
                                 <li><a href="https://github.com/CedricPriouret"><i class="fab fa-github"></i></a></li>
@@ -36,7 +31,7 @@ const Team = () => {
           <div className='team-details'>
           <div className='img-social'>
               <div className='img-user'>
-            <img src='https://avatars2.githubusercontent.com/u/58628260?s=460&u=ea2cb5d04c2270fd17b2181d1e701f77749df75d&v=4' alt='Cyrille' />
+            <img src='https://avatars2.githubusercontent.com/u/58628260?s=460&u=ea2cb5d04c2270fd17b2181d1e701f77749df75d&v=4' alt='Cyrille' title='Cyrille'/>
             </div>
             <div class="social-icons">
                                 <li><a href="https://github.com/Cissou13"><i class="fab fa-github"></i></a></li>
@@ -53,7 +48,7 @@ const Team = () => {
           <div className='team-details'>
           <div className='img-social'>
               <div className='img-user'>
-            <img src='https://avatars1.githubusercontent.com/u/65537750?s=460&v=4' alt='Jonathan' />
+            <img src='https://avatars1.githubusercontent.com/u/65537750?s=460&v=4' alt='Jonathan' title='Jonathan'/>
             </div>
             <div class="social-icons">
                                 <li><a href="https://github.com/john32313"><i class="fab fa-github"></i></a></li>
@@ -70,7 +65,7 @@ const Team = () => {
           <div className='team-details'>
           <div className='img-social'>
               <div className='img-user'>
-            <img src='https://avatars2.githubusercontent.com/u/69692885?s=460&u=7f5e98284216b04b474f5bb82b16db8060d71ca9&v=4' alt='Justine' />
+            <img src='https://avatars2.githubusercontent.com/u/69692885?s=460&u=7f5e98284216b04b474f5bb82b16db8060d71ca9&v=4' alt='Justine' title='Justine'/>
             </div>
             <div class="social-icons">
                                 <li><a href="https://github.com/PainJustine"><i class="fab fa-github"></i></a></li>

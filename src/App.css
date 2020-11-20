@@ -39,7 +39,7 @@ h1 {
   align-items: center;
 }
 .header h1 {
-  font-size: 60px;
+  font-size: 50px;
   margin-left: 1%;
   font-family: 'Fondamento', cursive;
   text-align: center;
@@ -144,7 +144,6 @@ h1 {
 
 .homepage-container a {
   text-decoration: none;
-  text-decoration: underline;
   color: rgb(255, 241, 212);
   text-shadow: #000000 1px 1px, #00000067 -1px 1px, #0000006b -1px -1px,
     #000000 1px -1px;
@@ -190,6 +189,9 @@ fieldset {
   flex-direction : column;
   align-items: center;
 }
+.gender .inputs {
+  margin : 0 10px;
+}
 
 fieldset .checkboxGender {
   display: flex;
@@ -205,6 +207,10 @@ fieldset label {
 
 fieldset input {
   margin: 0.25 0.5em;
+}
+
+.align {
+  flex-direction : row;
 }
 
 .inputs {
@@ -545,6 +551,7 @@ form {
   text-align: center;
   font-family: 'MedievalSharp', sans-serif;
   padding-bottom: 10px;
+  margin: 0 auto;
 }
 
 .profile-container h1 {
@@ -610,6 +617,8 @@ form {
 .profile-like-and-message {
   display: flex;
   justify-content: center;
+  align-items: center;
+
 }
 
 .profile-like button,
@@ -733,14 +742,14 @@ form {
 
 .team-details {
   display: flex;
-  flex-direction: row;
-  margin: 10px auto;
 }
 
 .team-details blockquote {
   border: 2px double black;
-  border-radius: 0 0 30% 30%;
-  padding: 5%;
+  border-radius: 0 0 40% 40%;
+  padding: 0 10px;
+  margin: 20px;
+  height : 170px;
 }
 
 .team-details img {
@@ -758,22 +767,6 @@ form {
 .img-user {
   display : flex;
   justify-content: center;
-}
-
-/* OVERLAY IMG */
-
-.overlay-profile-img {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  top: 80%;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.842);
-}
-
-.container-img:hover .overlay-profile-img {
-  opacity: 1;
 }
 
 .name-profile-img {
@@ -833,6 +826,7 @@ form {
 .social-icons a:hover:before {
   transform: scale(0);
   transition: all 265ms ease-in;
+  color: #fff;
 }
 
 .social-icons a:hover i {
@@ -840,9 +834,7 @@ form {
   -ms-transform: scale(2.2);
   -webkit-transform: scale(2.2);
   color: #FFF;
-  background: -webkit-linear-gradient(45deg, #7d5d3b, #54381e);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   transition: all 265ms ease-in;
 }
 
@@ -914,7 +906,7 @@ HREF UNDERLINE ANIMATION
     RESPONSIVE
 *****************/
 
-@media all and (max-width: 990px) {
+@media all and (max-width: 1040px) {
   .title {
     display: none;
   }
@@ -966,17 +958,12 @@ HREF UNDERLINE ANIMATION
     align-items: center;
   }
   
-  fieldset{
-    display : flex;
-    flex-direction: column;
-    align-items : center;
-  }
-  fieldset .checkboxGender {
+
+  fieldset {
     display: flex;
     flex-direction: column;
   }
-
-  .img-social {
+ .img-social {
     display: flex;
     flex-direction: column;
     align-items: center;
