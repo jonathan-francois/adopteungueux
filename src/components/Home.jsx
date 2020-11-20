@@ -84,6 +84,43 @@ class Home extends React.Component {
     }
   };
 
+  autoFind = (autoSearch) => {
+    const { setLookingState } = this.props;
+    if(autoSearch === 'goodHousewives') {
+      setLookingState({
+        age: {
+          min: 28,
+          max: 42,
+        },
+        city: 'Paris',
+        gender: 'female',
+      });
+    this.setState({ redirect: true });
+    }
+    else if(autoSearch === 'courtesans') {
+      setLookingState({
+        age: {
+          min: 18,
+          max: 25,
+        },
+        city: 'Verdun',
+        gender: 'female',
+      });
+    this.setState({ redirect: true });
+    }
+    else if(autoSearch === 'olds') {
+      setLookingState({
+        age: {
+          min: 45,
+          max: 70,
+        },
+        city: 'Marseille',
+        gender: 'female',
+      });
+    this.setState({ redirect: true });
+    }
+  };
+
   render() {
     if (this.state.redirect) return <Redirect push to='/research' />;
     return (
@@ -98,13 +135,13 @@ class Home extends React.Component {
             <img className='border-medieval' src={Border} alt='' />
           </section>
           <section className='selection'>
-            <div>
+            <div onClick={()=>this.autoFind("goodHousewives")}>
               <img className='selection-pic' src={Housewives} alt='' />
             </div>
-            <div>
+            <div onClick={()=>this.autoFind("courtesans")}>
               <img className='selection-pic' src={Courtesans} alt='' />
             </div>
-            <div>
+            <div onClick={()=>this.autoFind("olds")}>
               <img className='selection-pic' src={Olds} alt='' />
             </div>
           </section>
