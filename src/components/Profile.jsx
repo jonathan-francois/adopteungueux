@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Profile = ({ data, handleRandom, addLikedProfile }) => {
   return (
@@ -27,12 +28,21 @@ const Profile = ({ data, handleRandom, addLikedProfile }) => {
         </div>
         <div className='profile-message'>
           {/* Ici ça sera juste une petit icone d'enveloppe pour faire genre on peut envoyer un msg, mais en fait on peut pas.  */}
-          <button>🗨️</button>
+          <Link to='/messenger'>
+            <button>🗨️</button>
+          </Link>
         </div>
       </section>
-      <button type='button' className='btn-find' onClick={handleRandom}>
-        Next gueux
-      </button>
+      <div className='research-btn'>
+        <button type='button' className='btn-find' onClick={handleRandom}>
+          Another gueux
+        </button>
+        <Link to='/myprofile'>
+          <button type='button' className='btn-find btn2'>
+            Done searching
+          </button>
+        </Link>
+      </div>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <main className='footer'>
       <nav className='menu-footer'>
         <Link to='/' className='menu-item-footer, cool-link'>
           Terms of service
@@ -16,7 +16,7 @@ const Footer = () => {
         </Link>
       </nav>
       <p>© 2020 Adopt 1 Gueux</p>
-    </footer>
+    </main>
   );
 };
 

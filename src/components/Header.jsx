@@ -5,9 +5,11 @@ const Header = () => {
   return (
     <header className='header'>
       <h1 className='title'>
-        Adopt
-        <span> 1 </span>
-        Gueux
+        <p>
+          Adopt
+          <span> 1 </span>
+          Gueux
+        </p>
       </h1>
       <nav className='navbar'>
         <Link to='/' className='menu-item' alt='Home'>
@@ -16,7 +18,7 @@ const Header = () => {
         <Link to='/myprofile' className='menu-item' alt='My Profile'>
           🧔🏽‍
         </Link>
-        <Link to='/messages' className='menu-item' alt='Messages'>
+        <Link to='/messenger' className='menu-item' alt='Messages'>
           ✉️
         </Link>
       </nav>

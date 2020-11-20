@@ -10,7 +10,11 @@ const Profile = ({ data, addLikedProfile, removeLikedProfile }) => {
         <div className='profile-info'>
           <p>Username: {data.login.username}</p>
           <p>Age: {data.dob.age} years</p>
-          <button type='button' onClick={() => removeLikedProfile(data)}>
+          <button
+            type='button'
+            className='remove-btn'
+            onClick={() => removeLikedProfile(data)}
+          >
             ❌
           </button>
         </div>

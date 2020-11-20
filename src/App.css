@@ -1,12 +1,12 @@
-/* IMPORTS
-/* Texte */
+/* IMPORTS */
+/* Fonts for text*/
 @import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-/* Title */
+/* Font for Title */
 @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
 
-/* CSS GLOBAL */
+/* GLOBAL CSS */
 
 .input-range__label {
   color: black;
@@ -24,38 +24,38 @@ body {
 
 .header {
   padding: 4% 1%;
-  padding-right: 3%;
+  padding-right: 2%;
   background-image: url('./assets/bannerpic2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
-  justify-content: space-between;
 }
 
-.header a {
-  margin-top: 60%;
-}
 h1 {
   text-shadow: 2px 2px 3px #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header h1 {
   font-size: 60px;
   font-family: 'Fondamento', cursive;
   text-align: center;
-  letter-spacing: 0.7px;
+  letter-spacing: 2px;
   color: rgb(255, 241, 212);
-  margin-left: 2%;
+
   text-shadow: #000000 2px 2px, #000000 -2px 2px, #000000 -2px -2px,
     #000000 2px -2px;
 }
 
-/* H1 ANIMATION */
+/***** Header ANIMATION *****/
 
-.header h1:hover {
+.header h1:hover,
+.header a:hover {
   -webkit-animation: bounce 0.35s ease infinite alternate;
   animation: bounce 0.35s ease infinite alternate;
-  cursor: context-menu;
+  cursor: pointer;
 }
 
 @-webkit-keyframes bounce {
@@ -84,7 +84,7 @@ h1 {
   filter: saturate(0%) contrast(95%);
   transition: filter 1s;
   margin-top: 40%;
-  margin-right: 17%;
+  margin: 0 10px;
   font-size: 40px;
   transition: transform 0.3s ease 0s;
   text-decoration: none;
@@ -105,30 +105,31 @@ h1 {
 .navbar {
   margin-left: auto;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
 }
 
 /************************ 
         HOMEPAGE
 ************************/
 
-.homepage-container > h1 {
-  height: 105px;
-  font-size: 50px;
-  font-family: 'Almendra SC', sans-serif;
-}
-
 .homepage-container {
   background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'MedievalSharp', sans-serif;
 }
 
-.homepage-content {
-  max-width: 90%;
-  background-image: url('./assets/Texturepapier.png');
-  margin-left: 4.5%;
-  padding: 30px 30px;
+.homepage-container > h1 {
+  font-family: 'Almendra SC', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  word-spacing: 5px;
+  text-align: center;
+  height: 105px;
+  font-size: 50px;
 }
 
 .homepage-container a {
@@ -137,18 +138,19 @@ h1 {
   color: rgb(255, 241, 212);
   text-shadow: #000000 1px 1px, #00000067 -1px 1px, #0000006b -1px -1px,
     #000000 1px -1px;
-}
-
-.homepage-container > h1 {
-  font-family: 'Almendra SC', sans-serif;
-  margin: 0;
   padding: 20px;
-  background-image: url('./assets/texturevieuxpapier.jpg');
-  word-spacing: 5px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homepage-content {
+  max-width: 90%;
+  background-image: url('./assets/Texturepapier.png');
+  margin: 0 auto;
+  padding: 30px 30px;
 }
 
-.find-title {
+.homepage-content .find-title {
   margin-bottom: 5px;
   font-family: 'Almendra SC', sans-serif;
   font-size: 30px;
@@ -161,6 +163,7 @@ h1 {
 
 .homepage-container p {
   margin: 0;
+  text-align: center;
 }
 
 .input-range {
@@ -173,6 +176,7 @@ fieldset {
   border: none;
   text-align: center;
   font-size: 20px;
+  margin: 0 auto;
 }
 
 fieldset h3 {
@@ -184,12 +188,13 @@ fieldset label {
 }
 
 fieldset input {
-  margin: 0.5em 0.75em;
+  margin: 0.25 0.5em;
 }
 
 #ville {
   border-radius: 5px;
   background-color: rgba(124, 97, 67, 0.322);
+  text-align: center;
 }
 
 #ville:focus {
@@ -235,6 +240,10 @@ fieldset input {
   outline: 0;
 }
 
+.btn2 > a {
+  text-decoration: none;
+}
+
 form {
   padding: 0.75em 0;
   font-family: 'Fondamento', cursive;
@@ -258,8 +267,54 @@ form {
 .selection-pic {
   border: 2px solid rgb(124, 97, 67);
   cursor: pointer;
-  max-width: 370px;
+  max-width: 315px;
   height: 245px;
+}
+
+/************************ 
+       LISTE CONV
+************************/
+
+.conversationList {
+  background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MedievalSharp', sans-serif;
+}
+
+.conversations-items {
+  display: flex;
+  flex-direction: column;
+  background-image: url('./assets/Texturepapier.png');
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 30px;
+}
+
+.conversations-items a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  align-self: center;
+}
+
+.conversations-items p {
+  margin: 10px auto;
+  border-bottom: 2px dotted black;
+  width: 250px;
+}
+.conversation-title {
+  text-align: center;
+  font-family: 'Almendra SC', sans-serif;
+  font-size: 50px;
+  max-width: 90%;
+  margin: 20px auto;
+  height: 105px;
 }
 
 /************************ 
@@ -268,6 +323,8 @@ form {
 
 .conversation-container {
   background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -419,12 +476,14 @@ form {
   margin: 0;
   padding: 20px;
   background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   word-spacing: 5px;
   text-align: center;
 }
 
 .profile-picture img {
-  margin: 30px;
+  margin: 5px 50px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -451,6 +510,10 @@ form {
   padding: 11px 23px;
   text-decoration: none;
   text-shadow: 0px -1px 0px #2b665e;
+  width: 150px;
+}
+.btn-find > * {
+  text-align: center;
 }
 
 .btn-find:hover {
@@ -508,6 +571,12 @@ form {
 /************************ 
         MYPROFILE
 ************************/
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
 
 .profile-info button {
   border-radius: 50%;
@@ -542,7 +611,24 @@ form {
 .likedProfile {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.my-profile p {
+  padding: 5px 0;
+  font-family: 'Fondamento', cursive;
+  font-size: 20px;
+}
+
+.my-profile > h3 {
+  text-align: center;
+}
+
+#reset > a {
+  font-family: 'Almendra SC', sans-serif;
+  text-shadow: none;
+  color: teal;
+  font-size: 14px;
 }
 
 /************************ 
@@ -551,8 +637,10 @@ form {
 
 .footer {
   background-image: url('./assets/texturevieuxpapier.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
-  padding: 15px 0 0;
+  padding: 15px;
   color: antiquewhite;
   display: flex;
   flex-direction: column;
@@ -569,14 +657,16 @@ form {
   display: flex;
   justify-content: space-between;
 }
-.menu-foooter ul {
-  width: 1300px;
-}
+
 .footer p {
   font-family: 'Almendra SC', sans-serif;
-  padding-top: 20px;
   font-weight: bold;
   font-size: 1.5em;
+  border-top: dashed 1px rgba(230, 211, 168, 0.7);
+  width: 50%;
+  padding-top: 20px;
+  margin-left: 25%;
+  padding-bottom: 10px;
 }
 
 /************************ 
@@ -617,7 +707,10 @@ HREF UNDERLINE ANIMATION
     flex-direction: column;
     flex-wrap: wrap;
   }
-
+  .userH1 h1,
+  .userH1 a {
+    display: none;
+  }
   .header {
     max-height: 250px;
     padding: 0;
@@ -639,9 +732,14 @@ HREF UNDERLINE ANIMATION
   }
 
   .selection-pic {
-    max-width: 250px;
+    max-width: 200px;
     max-height: 150px;
-    margin-left: 13%;
-    margin-top: 5%;
+    margin: 5px auto;
+  }
+
+  .homepage-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

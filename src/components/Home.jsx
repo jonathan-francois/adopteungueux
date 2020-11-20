@@ -1,9 +1,9 @@
 import React from 'react';
 import Criterias from './Criterias';
 import { Redirect, Link } from 'react-router-dom';
-import Lords from '../assets/lords.jpg';
+import Housewives from '../assets/housewives.jpg';
 import Olds from '../assets/olds.jpg';
-import Knights from '../assets/knights.jpg';
+import Courtesans from '../assets/courtesans.jpg';
 import Border from '../assets/border.png';
 
 // import LordsPicture from '../assets/lords.jpg';
@@ -100,10 +100,10 @@ class Home extends React.Component {
           </section>
           <section className='selection'>
             <div>
-              <img className='selection-pic' src={Lords} alt='' />
+              <img className='selection-pic' src={Housewives} alt='' />
             </div>
             <div>
-              <img className='selection-pic' src={Knights} alt='' />
+              <img className='selection-pic' src={Courtesans} alt='' />
             </div>
             <div>
               <img className='selection-pic' src={Olds} alt='' />
