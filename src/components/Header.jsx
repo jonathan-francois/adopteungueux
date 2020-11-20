@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className='header'>
+    <header className='header'>
       <h1 className='title'>
         Adopt
-        <br /> <span>1 </span>
+        <span> 1 </span>
         Gueux
       </h1>
       <nav className='navbar'>
@@ -14,14 +14,13 @@ const Header = () => {
           🏠
         </Link>
         <Link to='/myprofile' className='menu-item' alt='My Profile'>
-          🧝‍
+          🧔🏽‍
         </Link>
         <Link to='/messages' className='menu-item' alt='Messages'>
           ✉️
         </Link>
-        {/* <Link to="/logout">Logout</Link> */}
       </nav>
-    </div>
+    </header>
   );
 };
 

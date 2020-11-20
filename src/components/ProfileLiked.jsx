@@ -11,7 +11,7 @@ const Profile = ({ data, addLikedProfile, removeLikedProfile }) => {
           <p>Username: {data.login.username}</p>
           <p>Age: {data.dob.age} years</p>
           <button type='button' onClick={() => removeLikedProfile(data)}>
-            Remove
+            ❌
           </button>
         </div>
       </section>

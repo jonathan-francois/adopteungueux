@@ -1,5 +1,6 @@
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
+import Border from '../assets/border.png';
 
 export default function Criterias(props) {
   const {
@@ -15,7 +16,10 @@ export default function Criterias(props) {
     <section className='criterias'>
       <form onSubmit={props.handleSubmit}>
         <fieldset className='gender'>
-          <h3>I want to find a : </h3>
+          <h3 className='find-title'>I want to find a : </h3>
+          <img className='border-medieval' src={Border} alt='' />
+          <br />
+          <br />
           <input
             type='checkbox'
             id='gender_male'
@@ -49,10 +53,10 @@ export default function Criterias(props) {
         <fieldset className='city'>
           <h3>City</h3>
 
-          <input
-            type='text'
+          <textarea
             id='ville'
             name='city'
+            column='3'
             value={city}
             placeholder='Verdun'
             onChange={props.handleChange}

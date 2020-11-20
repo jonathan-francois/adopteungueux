@@ -1,5 +1,6 @@
 import React from 'react';
-import Profile1 from '../assets/profile1.jpg';
+import user1image from '../assets/profile1.png';
+import user2image from '../assets/profile2.png';
 
 const userProfile = {
   gender: 'male',
@@ -56,28 +57,66 @@ class Messenger extends React.Component {
     const { value, messageAdd } = this.state;
     return (
       <div className='conversation-container'>
-        <h1>Conversation with {userProfile.login.username}</h1>
+        <p>
+          <img className='messageAvatar' src={user2image} alt='1' />
+          <h1>Conversation with {userProfile.login.username}</h1>
+        </p>
         <div className='conversation-content'>
           <div className='conversation1'>
-            <img className='conversation1pic' src={Profile1}></img>Good evening
-            Milady, what are you planning to do tonight ?
-          </div>
-          <div className='conversation2'>Eating some boar, what about you?</div>
-          <div className='conversation1'>
-            <img className='conversation1pic' src={Profile1}></img>Just chillin'
-            with my 3 wives
+            <img
+              className='conversation2pic'
+              src={user2image}
+              alt='some user'
+            ></img>
+            <p>Good evening Milady, what're you planning to do tonight ?</p>
           </div>
           <div className='conversation2'>
-            Can we have some hunt tomorrow ? I need to fill up.
+            <p>Eating some boar, what about you?</p>
+            <img
+              className='conversation1pic'
+              src={user1image}
+              alt='some user'
+            ></img>
           </div>
           <div className='conversation1'>
-            <img className='conversation1pic' src={Profile1}></img>Can i bring
-            my other wives ?
+            <img
+              className='conversation2pic'
+              src={user2image}
+              alt='some user'
+            ></img>
+            <p>Just chillin' with my 3 wives</p>
           </div>
-          <div className='conversation2'>Ok. But I'm not sharing my game </div>
+          <div className='conversation2'>
+            <p>Can we have some hunt tomorrow ? I need to fill up.</p>
+            <img
+              className='conversation1pic'
+              src={user1image}
+              alt='some user'
+            ></img>
+          </div>
           <div className='conversation1'>
-            <img className='conversation1pic' src={Profile1}></img>But you share
-            your man ?
+            <img
+              className='conversation2pic'
+              src={user2image}
+              alt='some user'
+            ></img>
+            <p>Can i bring my other wives ?</p>
+          </div>
+          <div className='conversation2'>
+            <p>Ok. But I'm not sharing my game</p>
+            <img
+              className='conversation1pic'
+              src={user1image}
+              alt='some user'
+            ></img>
+          </div>
+          <div className='conversation1'>
+            <img
+              className='conversation2pic'
+              src={user2image}
+              alt='some user'
+            ></img>
+            <p>But you share your man ? 🤍</p>
           </div>
           {messageAdd &&
             messageAdd.map((m) => <div className='conversation2'>{m}</div>)}
@@ -87,17 +126,12 @@ class Messenger extends React.Component {
             onSubmit={(e) => handleSubmit(e, userProfile.login.username)}
             className='send-form'
           >
-            <label className='label-message'>
-              Chatting with{' '}
-              <img
-                className='messageAvatar'
-                src={userProfile.picture.thumbnail}
-                alt='1'
-              />{' '}
-            </label>
+            <p id='camera'>📷 </p>
+            <p id='camera'> 📎</p>
+            <p id='smiley'>😀</p>
             <textarea
               className='send-message'
-              placeholder='Type your message '
+              placeholder='Type your message   '
               value={value}
               onChange={handleChange}
               rows='5'

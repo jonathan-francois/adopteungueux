@@ -1,6 +1,10 @@
 import React from 'react';
 import Criterias from './Criterias';
 import { Redirect, Link } from 'react-router-dom';
+import Lords from '../assets/lords.jpg';
+import Olds from '../assets/olds.jpg';
+import Knights from '../assets/knights.jpg';
+import Border from '../assets/border.png';
 
 // import LordsPicture from '../assets/lords.jpg';
 
@@ -88,7 +92,23 @@ class Home extends React.Component {
         <h1 className='userH1'>
           Welcome <Link to='/myprofile'>Philibert de Montalembert !</Link>
         </h1>
+
         <div className='homepage-content'>
+          <section className='intro'>
+            <h3 className='intro-title'>Our best matches for you, Messire</h3>
+            <img className='border-medieval' src={Border} alt='' />
+          </section>
+          <section className='selection'>
+            <div>
+              <img className='selection-pic' src={Lords} alt='' />
+            </div>
+            <div>
+              <img className='selection-pic' src={Knights} alt='' />
+            </div>
+            <div>
+              <img className='selection-pic' src={Olds} alt='' />
+            </div>
+          </section>
           <Criterias
             profile={this.state.profile}
             handleChange={this.handleChange}
@@ -96,11 +116,6 @@ class Home extends React.Component {
             handleAgeValue={this.handleAgeValue}
             handleSubmit={this.handleSubmit}
           />
-          <section className='selection'>
-            <div className='lords'>Test</div>
-            <div className='knights'></div>
-            <div className='olds'></div>
-          </section>
         </div>
       </main>
     );
