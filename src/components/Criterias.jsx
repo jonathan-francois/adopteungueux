@@ -20,6 +20,7 @@ export default function Criterias(props) {
           <img className='border-medieval' src={Border} alt='' />
           <br />
           <br />
+          <div className="checkboxGender">
           <div className="inputs"><input
             type='checkbox'
             id='gender_male'
@@ -39,6 +40,7 @@ export default function Criterias(props) {
           />
           <label htmlFor='gender_female'>Female</label>
          
+          </div>
           </div>
         </fieldset>
         <fieldset className='age'>
@@ -69,7 +71,7 @@ export default function Criterias(props) {
 
         <fieldset className='cleanliness'>
           <h3>Degree of cleanliness :</h3>
-          <div classNames="inputs">
+          <div className="inputs">
           <input
             type='checkbox'
             id='clean1'

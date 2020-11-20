@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Messenger from './components/Messenger';
+import Messenger2 from './components/Messenger2';
 import ConversationsList from './components/ConversationsList';
 import Searchedprofile from './components/Searchedprofile';
 import Home from './components/Home';
@@ -45,7 +46,8 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route path='/messenger' component={ConversationsList} />
-          <Route path='/messages' component={Messenger} />
+          <Route path='/message1' component={Messenger} />
+          <Route path='/message2' component={Messenger2} />
           <Route path='/research'>
             <Searchedprofile
               looking={this.state.looking}
