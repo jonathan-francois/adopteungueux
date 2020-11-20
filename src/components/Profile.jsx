@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Profile = ({ data, handleRandom, addLikedProfile, image }) => {
+const Profile = ({ data, handleRandom, addLikedProfile }) => {
   return (
     <>
       <section className='profile-infos'>
         <div className='profile-picture'>
-          <img src={image} alt={data.login.uuid} />
+          <img src={data.picture.large} alt={data.login.uuid} />
         </div>
         <div className='profile-info'>
           <p>Username: {data.login.username}</p>
