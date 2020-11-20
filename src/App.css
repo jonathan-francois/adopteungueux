@@ -745,11 +745,13 @@ form {
 }
 
 .team-details blockquote {
-  border: 2px double black;
+  border-top: 2px double rgba(0, 0, 0, 0.7);
   border-radius: 0 0 40% 40%;
   padding: 0 10px;
+  padding-top: 1%;
   margin: 20px;
   height : 170px;
+  width: 100%;
 }
 
 .team-details img {
