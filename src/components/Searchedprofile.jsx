@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Profile from './Profile';
-
 class SearchedProfile extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,6 @@ class SearchedProfile extends React.Component {
       isLoading: true,
       index: 0,
     };
-    console.log(this.props);
   }
 
   componentDidMount = async () => {
@@ -42,7 +40,7 @@ class SearchedProfile extends React.Component {
     item.dob.age <= this.props.looking.age.max;
 
   handleRandom = async () => {
-    if (this.state.index === this.state.dataFilter.length - 1) {
+    if (this.state.index === this.state.dataFilter.length - 1 ) {
       this.setState({ isLoading: true });
       this.setState({ index: 0 });
       await this.fetchDataFromApi();
@@ -56,16 +54,19 @@ class SearchedProfile extends React.Component {
     if (isLoading) return <h1>Chargement</h1>;
     if (!dataFilter) return <h1>No data</h1>;
     return (
-      <main className='profile-container'>
-        <h1>Matching Profiles</h1>
+      <div className="homepage-container">
+      <div className='profile-container'>
+      <h1>Matching Profiles</h1>
+      <div >
         {
           <Profile
             data={dataFilter[index]}
             handleRandom={this.handleRandom}
             addLikedProfile={this.props.addLikedProfile}
           />
-        }
-      </main>
+        }</div>
+      </div>
+      </div>
     );
   }
 }

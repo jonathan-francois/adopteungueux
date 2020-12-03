@@ -20,7 +20,8 @@ export default function Criterias(props) {
           <img className='border-medieval' src={Border} alt='' />
           <br />
           <br />
-          <input
+          <div className="checkboxGender">
+          <div className="inputs"><input
             type='checkbox'
             id='gender_male'
             name='gender_male'
@@ -28,6 +29,8 @@ export default function Criterias(props) {
             onChange={props.handleChangeChkb}
           />
           <label htmlFor='gender_male'>Male</label>
+          </div>
+          <div className="inputs">
           <input
             type='checkbox'
             id='gender_female'
@@ -36,6 +39,9 @@ export default function Criterias(props) {
             onChange={props.handleChangeChkb}
           />
           <label htmlFor='gender_female'>Female</label>
+         
+          </div>
+          </div>
         </fieldset>
         <fieldset className='age'>
           <h3>Age : </h3>
@@ -63,8 +69,9 @@ export default function Criterias(props) {
           />
         </fieldset>
 
-        <fieldset className='cleanliness'>
-          <h3>Degree of cleanliness :</h3>
+        <fieldset className='cleanliness align'>
+          <h3>Cleanliness :</h3>
+          <div className="inputs">
           <input
             type='checkbox'
             id='clean1'
@@ -73,6 +80,8 @@ export default function Criterias(props) {
             onChange={props.handleChangeChkb}
           />
           <label htmlFor='clean1'>Never heard about shower</label>
+          </div>
+          <div className="inputs">
           <input
             type='checkbox'
             id='clean2'
@@ -81,6 +90,8 @@ export default function Criterias(props) {
             onChange={props.handleChangeChkb}
           />
           <label htmlFor='clean2'>Only 1 per month</label>
+          </div>
+          <div className="inputs">
           <input
             type='checkbox'
             id='clean3'
@@ -89,9 +100,11 @@ export default function Criterias(props) {
             onChange={props.handleChangeChkb}
           />
           <label htmlFor='clean3'>More than 1 per week</label>
+          </div>
         </fieldset>
-        <fieldset id='relationship' className='relationship'>
+        <fieldset  className='relationship inputs align'>
           <h3>I'm loooking for :</h3>
+          <div className="inputs">
           <input
             type='radio'
             id='relation1'
@@ -100,6 +113,8 @@ export default function Criterias(props) {
             onChange={props.handleChange}
           />
           <label htmlFor='relation1'>A dirty night</label>
+          </div>
+          <div className="inputs">
           <input
             type='radio'
             id='relation2'
@@ -108,6 +123,7 @@ export default function Criterias(props) {
             onChange={props.handleChange}
           />
           <label htmlFor='relation2'>A dirty life companion</label>
+          </div>
         </fieldset>
         <button type='submit' className='btn-form'>
           Find your perfect match

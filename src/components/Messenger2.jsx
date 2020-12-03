@@ -1,6 +1,7 @@
 import React from 'react';
 import user1image from '../assets/profile1.png';
-import user2image from '../assets/profile2.png';
+import user3image from '../assets/profile3.png';
+
 
 const userProfile = {
   gender: 'male',
@@ -31,7 +32,7 @@ const userProfile = {
   },
 };
 
-class Messenger extends React.Component {
+class Messenger2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -65,60 +66,36 @@ class Messenger extends React.Component {
     return (
       <div className='conversation-container'>
         <div className="conv-header">
-          <img className='messageAvatar' src={user2image} alt='1' />
-          <h1>Conversation with {userProfile.login.username}</h1>
+          <img className='messageAvatar' src={user3image} alt='1' />
+          <h1>Conversation with Diane</h1>
         </div>
         <div className='conversation-content'>
           <div className='conversation2'>
-            <p>Good evening Milady, what're you planning to do tonight ?</p>
+            <p>Heyyy ladyyyy</p>
             <img
               className='conversation1pic'
               src={user1image}
               alt='some user'
             ></img>
           </div>
-          <div className='conversation1'>
-            <img
-              className='conversation2pic'
-              src={user2image}
-              alt='some user'
-            ></img>
-            <p>Eating some boar, what about you?</p>
-          </div>
           <div className='conversation2'>
-            <p>Just chillin' with my 3 wives</p>
+            <p>???????</p>
             <img
               className='conversation1pic'
               src={user1image}
               alt='some user'
             ></img>
           </div>
-          <div className='conversation1'>
-            <img
-              className='conversation2pic'
-              src={user2image}
-              alt='some user'
-            ></img>
-            <p>Can we have some hunt tomorrow ? I need to fill up.</p>
-          </div>
           <div className='conversation2'>
-            <p>Can i bring my other wives ?</p>
+            <p>🍆🍆🍆🍆</p>
             <img
               className='conversation1pic'
               src={user1image}
               alt='some user'
             ></img>
           </div>
-          <div className='conversation1'>
-            <img
-              className='conversation2pic'
-              src={user2image}
-              alt='some user'
-            ></img>
-            <p>Ok. But I'm not sharing my game</p>
-          </div>
           <div className='conversation2'>
-            <p>But you share your man ? 🤍</p>
+            <p>Why ....</p>
             <img
               className='conversation1pic'
               src={user1image}
@@ -162,4 +139,4 @@ class Messenger extends React.Component {
   }
 }
 
-export default Messenger;
+export default Messenger2;

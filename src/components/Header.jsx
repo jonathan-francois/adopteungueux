@@ -1,22 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   return (
     <header className='header'>
       <h1 className='title'>
-        <Link to='/'>
+        <HashLink to='/#tittleHome'>
           <p>
             Adopt
             <span> 1 </span>
             Gueux
           </p>
-        </Link>
+        </HashLink>
       </h1>
       <nav className='navbar'>
-        <Link to='/' className='menu-item' alt='Home'>
+        <HashLink to="/#tittleHome" className='menu-item' alt='Home'>
           🏠
-        </Link>
+        </HashLink>
         <Link to='/myprofile' className='menu-item' alt='My Profile'>
           🧔🏽‍
         </Link>
